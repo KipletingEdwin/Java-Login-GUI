@@ -15,6 +15,14 @@ public class LoginGUI extends JFrame {
     }
     public  void  addGUIComponent(){
         SpringLayout springLayout = new SpringLayout();
+        JPanel loginPanel = new JPanel();
+        loginPanel.setLayout(springLayout);
+
+        //username
+        JLabel usernameLabel = new JLabel("Username");
+        JTextField usernameField = new JTextField(CommonConstants.TEXTFIELD_SIZE);
+
+        loginPanel.add(usernameLabel);
 
     }
 }
