@@ -46,10 +46,11 @@ public class LoginGUI extends JFrame {
         springLayout.putConstraint(SpringLayout.WEST, passwordField,135,SpringLayout.WEST,loginPanel);
         springLayout.putConstraint(SpringLayout.NORTH, passwordField,135,SpringLayout.NORTH,loginPanel);
 
-
-
         loginPanel.add(passwordLabel);
         loginPanel.add(passwordField);
+
+        //login button
+        JButton loginButton = new JButton("Login");
 
         this.getContentPane().add(loginPanel);
 
