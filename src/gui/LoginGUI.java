@@ -52,6 +52,8 @@ public class LoginGUI extends JFrame {
         //login button
         JButton loginButton = new JButton("Login");
         loginButton.setFont(new Font("Dialog",Font.BOLD,18));
+        springLayout.putConstraint(SpringLayout.WEST, loginButton,150,SpringLayout.WEST,loginPanel);
+        springLayout.putConstraint(SpringLayout.NORTH, loginButton,250,SpringLayout.NORTH,loginPanel);
 
         loginPanel.add(loginButton);
 
