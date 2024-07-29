@@ -4,6 +4,9 @@ import constants.CommonConstants;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class LoginGUI extends JFrame {
     public  LoginGUI(){
@@ -54,9 +57,21 @@ public class LoginGUI extends JFrame {
         loginButton.setFont(new Font("Dialog",Font.BOLD,18));
         springLayout.putConstraint(SpringLayout.WEST, loginButton,150,SpringLayout.WEST,loginPanel);
         springLayout.putConstraint(SpringLayout.NORTH, loginButton,250,SpringLayout.NORTH,loginPanel);
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public  void actionPerformed(ActionEvent e){
+                String username = usernameField.getText();
+                String password = passwordField.getText();
+
+                if(username.equals("username") && password.equals("password")){
+                    System.out.println("LOGIN SUCCESSFUL!");
+                } else {
+                    System.out.println("LOGIN FAIL...");
+                }
+            }
+        });
 
         loginPanel.add(loginButton);
-
         this.getContentPane().add(loginPanel);
 
     }
