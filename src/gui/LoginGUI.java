@@ -51,6 +51,7 @@ public class LoginGUI extends JFrame {
 
         //login button
         JButton loginButton = new JButton("Login");
+        loginButton.setFont(new Font("Dialog",Font.BOLD,18));
 
         this.getContentPane().add(loginPanel);
 
