@@ -24,15 +24,28 @@ public class LoginGUI extends JFrame {
         usernameLabel.setFont(new Font("Dialog", Font.PLAIN,18));
 
         JTextField usernameField = new JTextField(CommonConstants.TEXTFIELD_SIZE);
+        usernameField.setFont(new Font("Dialog",Font.PLAIN,18));
 
         springLayout.putConstraint(SpringLayout.WEST, usernameLabel,35,SpringLayout.WEST, loginPanel);
         springLayout.putConstraint(SpringLayout.NORTH, usernameLabel,85,SpringLayout.NORTH, loginPanel);
+        springLayout.putConstraint(SpringLayout.WEST,usernameField,135,SpringLayout.WEST,loginPanel);
+        springLayout.putConstraint(SpringLayout.NORTH,usernameField,85,SpringLayout.NORTH,loginPanel);
+
         loginPanel.add(usernameLabel);
         loginPanel.add(usernameField);
 
         //password
         JLabel passwordLabel = new JLabel("Password");
+        passwordLabel.setFont(new Font("Dialog", Font.PLAIN, 18));
+
         JPasswordField passwordField = new JPasswordField(CommonConstants.TEXTFIELD_SIZE);
+        passwordField.setFont(new Font("Dialog", Font.PLAIN, 18));
+
+        springLayout.putConstraint(SpringLayout.WEST,passwordLabel,35,SpringLayout.WEST,loginPanel);
+        springLayout.putConstraint(SpringLayout.NORTH, passwordLabel,135,SpringLayout.NORTH,loginPanel);
+        springLayout.putConstraint(SpringLayout.WEST, passwordField,135,SpringLayout.WEST,loginPanel);
+        springLayout.putConstraint(SpringLayout.NORTH, passwordField,135,SpringLayout.NORTH,loginPanel);
+
 
 
         loginPanel.add(passwordLabel);
