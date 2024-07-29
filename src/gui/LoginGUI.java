@@ -3,6 +3,7 @@ package gui;
 import constants.CommonConstants;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class LoginGUI extends JFrame {
     public  LoginGUI(){
@@ -20,9 +21,24 @@ public class LoginGUI extends JFrame {
 
         //username
         JLabel usernameLabel = new JLabel("Username");
+        usernameLabel.setFont(new Font("Dialog", Font.PLAIN,18));
+
         JTextField usernameField = new JTextField(CommonConstants.TEXTFIELD_SIZE);
 
+        springLayout.putConstraint(SpringLayout.WEST, usernameLabel,35,SpringLayout.WEST, loginPanel);
+        springLayout.putConstraint(SpringLayout.NORTH, usernameLabel,85,SpringLayout.NORTH, loginPanel);
         loginPanel.add(usernameLabel);
+        loginPanel.add(usernameField);
+
+        //password
+        JLabel passwordLabel = new JLabel("Password");
+        JPasswordField passwordField = new JPasswordField(CommonConstants.TEXTFIELD_SIZE);
+
+
+        loginPanel.add(passwordLabel);
+        loginPanel.add(passwordField);
+
+        this.getContentPane().add(loginPanel);
 
     }
 }
